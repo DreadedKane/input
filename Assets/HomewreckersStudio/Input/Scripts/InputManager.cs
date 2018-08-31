@@ -3,20 +3,41 @@
  * Licensed under the MIT License. See LICENSE file in the project root for full license information.
  */
 
-using UnityEngine;
+using System.Collections.Generic;
 
 namespace HomewreckersStudio
 {
-    public sealed partial class InputManager : MonoBehaviour
+    public sealed partial class InputManager : Singleton<InputManager>
     {
-        partial void Internal();
+        /** Used to get specific controls. */
+        private List<Control> m_controls;
 
         /**
-         * Defers to installed InputManager.
+         * Gets the control for the given key.
          */
-        private void Awake()
+        public Control GetControl(string key)
         {
-            Internal();
+            Control control = null;
+
+            GetControlPartial(ref control, key);
+
+            return control;
         }
+
+        /** Implemented in input module. */
+        partial void GetControlPartial(ref Control reference, string key);
+
+        /**
+         * Defers to installed input module.
+         */
+        protected override void Awake()
+        {
+            base.Awake();
+
+            AwakePartial();
+        }
+
+        /** Implemented in input module. */
+        partial void AwakePartial();
     }
 }
