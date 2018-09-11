@@ -10,7 +10,7 @@ namespace HomewreckersStudio
         /** Gets the control key. */
         public abstract string Key { get; }
 
-        /** Gets the assigned input. */
+        /** Gets the assigned input description. */
         public abstract string Input { get; }
     }
 }

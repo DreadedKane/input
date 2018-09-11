@@ -28,7 +28,7 @@ namespace HomewreckersStudio
         partial void GetControlPartial(ref Control reference, string key);
 
         /**
-         * Defers to installed input module.
+         * Defers to input module.
          */
         protected override void Awake()
         {

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/HomewreckersStudio/Input/Scenes/Tests/UnitTests.unity
+    guid: 6d34bc93081e86d418820ca56bb5c250
   m_configObjects: {}
