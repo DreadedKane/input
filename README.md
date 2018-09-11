@@ -2,11 +2,12 @@
 
 Unity package for input management.
 
-## Requirements
-* [Core](https://github.com/DreadedKane/core)
+## Features
+* Get individual controls.
 
-### Rewired
+## Requirements
 * [Rewired](https://assetstore.unity.com/packages/tools/utilities/rewired-21676)
+* [Core](https://github.com/DreadedKane/core)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit)
